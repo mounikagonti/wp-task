@@ -44,56 +44,53 @@ const Banner = () => {
   return (
     <div className="container">
       <div className="banner">
-        <div className="chevron_icon" onClick={handleOnClick}>
-          {!isToggled ? <FiChevronLeft /> : <FiChevronRight />}
-        </div>
-        <div className="banner_left">
-          <div className="banner_left_sidebar" ref={sidebarRef}>
-            <div className="banner_left_heading">
-              MAITREYA BUDDHA IN GESTURE OF FEARLESSNESS (ABHAYA MUDRA)
-            </div>
-            <div className="banner_left_icon_wrapper">
-              {iconArray.map((item: any) => (
-                <div className="icon_container">
-                  <div className="like">{item?.icon}</div>
-                  <div className="count">{item?.count}</div>
-                </div>
-              ))}
-            </div>
-            <div className="product_details">
-              <div className="P_text">Dynasty : Ahichchhatra</div>
-              <div className="P_text">Period : 200 CE</div>
-              <div className="P_text">Material : Sandstone</div>
-              <div className="P_text">Location : National Museum</div>
-            </div>
-            <div className="product_description">
-              <div className="P_heading">Description:</div>
-              <p className="P_description">
-                Maitreya, the future Buddha to be, resides in the Tushita heaven
-                as a bodhisattva waiting to redeem humanity. In Buddhism,
-                Maitreya is the eighth Buddha, a successor of the seven
-                historical Buddhas (sapta-manushi Buddhas). The Digha Nikaya
-                mentions, Maitreya Buddha will be born in ketumati, in
-                present-day Varanasi, Uttar Pradesh. As a bodhisattva, Maitreya
-                wears a heavily adorned with earrings, wristlets, necklaces, and
-                an amulet. The
-              </p>
-            </div>
-            <div className="read_more_btn_wrapper">
-              <BsArrowRight className="arrow" />
-              <a href="#" className="read_more_btn">
-                Read More
-              </a>
-            </div>
-            <div className="btn_wrapper">
-              <button className="collection_btn">ADD TO COLLECTIONS</button>
-              <button className="souvenir_btn">SOUVENIR</button>
-            </div>
+        <div className="banner_left" ref={sidebarRef}>
+          <div className="chevron_icon" onClick={handleOnClick}>
+            <FiChevronLeft />
+          </div>
+          <div className="banner_left_heading">
+            MAITREYA BUDDHA IN GESTURE OF FEARLESSNESS (ABHAYA MUDRA)
+          </div>
+          <div className="banner_left_icon_wrapper">
+            {iconArray.map((item: any) => (
+              <div className="icon_container">
+                <div className="like">{item?.icon}</div>
+                <div className="count">{item?.count}</div>
+              </div>
+            ))}
+          </div>
+          <div className="product_details">
+            <div className="P_text">Dynasty : Ahichchhatra</div>
+            <div className="P_text">Period : 200 CE</div>
+            <div className="P_text">Material : Sandstone</div>
+            <div className="P_text">Location : National Museum</div>
+          </div>
+          <div className="product_description">
+            <div className="P_heading">Description:</div>
+            <p className="P_description">
+              Maitreya, the future Buddha to be, resides in the Tushita heaven
+              as a bodhisattva waiting to redeem humanity. In Buddhism, Maitreya
+              is the eighth Buddha, a successor of the seven historical Buddhas
+              (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya
+              Buddha will be born in ketumati, in present-day Varanasi, Uttar
+              Pradesh. As a bodhisattva, Maitreya wears a heavily adorned with
+              earrings, wristlets, necklaces, and an amulet. The
+            </p>
+          </div>
+          <div className="read_more_btn_wrapper">
+            <BsArrowRight className="arrow" />
+            <a href="#" className="read_more_btn">
+              Read More
+            </a>
+          </div>
+          <div className="btn_wrapper">
+            <button className="collection_btn">ADD TO COLLECTIONS</button>
+            <button className="souvenir_btn">SOUVENIR</button>
           </div>
         </div>
         <div className="banner_right">
-          <div className="chevron_icon">
-            <BiChevronsLeft />
+          <div className="chevron_icon" onClick={handleOnClick}>
+            {!isToggled ? <BiChevronsLeft /> : <BiChevronsRight />}
           </div>
         </div>
       </div>
